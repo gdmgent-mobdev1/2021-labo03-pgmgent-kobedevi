@@ -1,0 +1,217 @@
+// Barrel use for Molecules
+// ------------------------------------------------------------------------- /
+
+
+/*
+*
+* header
+*
+*/
+
+
+.m-header__navwrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 12.5rem;
+}
+
+.m-header__img-container {
+	display: flex;
+	align-items: flex-start;
+}
+
+.m-header__nav {
+	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.m-nav__toolbar {
+	@include plaintext(1rem, 700);
+}
+
+.m-nav__main {
+	@include bigtext(1.63rem, 500, "y");
+	position: relative;
+	margin-top: 2rem;
+
+	li {
+		margin-left: 1rem;
+	}
+}
+
+.m-concert-list__item {
+	margin: $spacer ($spacer / 2);
+	text-align: center;
+}
+
+/*
+
+announcements cards
+
+*/
+
+.m-card__info, .m-card__extra {
+	position: absolute;
+	bottom: $spacer / 3;
+	left: $spacer / 3;
+	color: $white;
+	z-index: $layer1;
+
+	* {
+		margin: 0;
+	}
+}
+
+.m-card__extra {
+	top: $spacer / 3;
+	left: $spacer / 3;
+}
+
+.m-cardContainer.col-4 {
+	margin: 0;
+}
+
+.m-cardContainer .o-card {
+	height: 50% - 2.5%;
+}
+
+.m-socialCard__buttons {
+	margin-top: $spacer / 3;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.m-socialCardButton {
+	display: flex;
+	margin: 0 5px;
+	padding: 10px 14px;
+	border-radius: 2px;
+	color: $white;
+	@include plaintext(1rem, 700);
+	transition: 0.35s;
+
+	&:hover {
+		filter: brightness(108%);
+	}
+}
+
+.m-socialCardButton.spotify {
+	background: #1db954;
+}
+
+
+.m-socialCardButton.fb {
+	background: #4267b2;
+}
+
+.m-button {
+	border: 2px solid $black;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border-radius: 2px;
+	margin: 0 auto;
+	background: $white;
+	transition: 0.5s;
+	@include plaintext(1rem, 700);
+
+	&::after {
+		@include icon("../img/arrow-btn.svg", 15);
+		margin-left: 10px;
+	}
+
+	&:hover {
+		background: $black;
+		color: $white;
+
+		&::after {
+			@include icon("../img/arrow-btn-white.svg", 15);
+		}
+	}
+}
+
+
+/*
+
+* newscards 
+
+*/
+
+
+.m-newscard__container {
+	position: relative;
+}
+
+.m-newscard__imgcontainer {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+
+	&::after {
+		@include imgShadow;
+	}
+}
+
+.o-news__card:hover {
+	
+	.m-newscard__imgcontainer::after {
+		opacity: 1;
+	}
+}
+
+.m-newscard__info {
+	padding: $spacer / 3;
+	background: $background-color-primary;
+}
+
+.m-list__card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.m-footer__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.m-footer_item__nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.m-newsLetter__form {
+	display: flex;
+	width: 100%;
+}
+
+
+/*
+*
+* footer
+*
+*/
+
+.m-footer__social {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.m-sponsors {
+	display: flex;
+	padding-top: $spacer*1.5;
+	
+	ul {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}

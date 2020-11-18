@@ -1,0 +1,1564 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  background-color: #fff;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.col-3 {
+  margin-right: 1.25%;
+  margin-bottom: 1.25%;
+  width: 24.0625%;
+}
+.col-3:nth-child(4n) {
+  margin-right: 0;
+}
+
+.col-4 {
+  margin-right: 1.25%;
+  margin-bottom: 1.25%;
+  width: 32.5%;
+}
+.col-4:nth-child(3n) {
+  margin-right: 0;
+}
+
+.col-8 {
+  margin-right: 1.25%;
+  margin-bottom: 1.25%;
+  width: 66.25%;
+}
+.col-8:nth-child(1) {
+  margin-right: 0;
+}
+
+.col-12 {
+  margin-right: 2.5%;
+  margin-bottom: 2.5%;
+  width: 100%;
+}
+.col-12:nth-child(1n) {
+  margin-right: 0;
+}
+
+/*sets to border-box*/
+.o-header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin: 0;
+  padding: 2.22rem;
+  background: url("../img/masthead.jpg") center center no-repeat;
+  background-size: cover;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.o-header * {
+  z-index: 1;
+  color: #fff;
+}
+.o-header .col-12 {
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0;
+}
+.o-header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  left: calc(50% - 20px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 20px solid transparent;
+  border-top-color: #000;
+}
+.o-header::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(to bottom, rgba(33, 32, 30, 0.9), rgba(33, 32, 30, 0.5), rgba(33, 32, 30, 0.6), #21201e);
+  z-index: 0;
+}
+
+.o-header__concert-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/*
+===============
+---molecules---
+===============
+*/
+.m-header__navwrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 12.5rem;
+}
+
+.m-header__img-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.m-header__nav {
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.m-nav__toolbar {
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.m-nav__main {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 500;
+  font-size: 1.63rem;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 2rem;
+}
+.m-nav__main li {
+  margin-left: 1rem;
+}
+
+.m-concert-list__item {
+  margin: 2.22rem 1.11rem;
+  text-align: center;
+}
+
+/*
+=============
+----atoms----
+=============
+*/
+.a-logo {
+  width: 114px;
+}
+
+.a-coordinator {
+  margin-left: 2.22rem;
+  width: 114px;
+}
+
+/*
+
+header navigation
+
+*/
+.a-toolbar__login,
+.a-toolbar__lang {
+  position: relative;
+  padding-right: 1.2333333333rem;
+}
+
+.a-toolbar__login {
+  margin-right: 1rem;
+}
+
+.a-toolbar__login::after,
+.a-toolbar__lang::after {
+  content: "";
+  width: 0.8333333333rem;
+  height: 0.8333333333rem;
+  display: flex;
+  margin: 0;
+  border-radius: 100%;
+  background: #fff url("../img/profile.svg") no-repeat 50% 50%;
+  position: absolute;
+  right: 0;
+  bottom: 10%;
+}
+
+.a-toolbar__lang::after {
+  background: url("../img/arrow-down.svg") no-repeat 50% 50%;
+}
+
+.a-main__link.active::after {
+  content: "";
+  height: 3px;
+  width: 100%;
+  display: block;
+  background: #fff;
+}
+
+.a-main__search {
+  position: relative;
+  bottom: 0;
+  width: 25px;
+}
+
+.a-showcase__date, .a-card__info__date {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.a-showcase__title, .a-card__info__title {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+.a-showcase__tickets, .a-card__info__tickets {
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  margin-top: 10px;
+}
+.a-showcase__tickets::before, .a-card__info__tickets::before {
+  content: "";
+  background: url("../img/ticket.svg");
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+}
+
+.title {
+  overflow: hidden;
+}
+
+.o-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #f5f5f5;
+  padding: 3.33rem 0;
+}
+.o-footer ul {
+  width: 100%;
+  display: flex;
+}
+.o-footer ul * {
+  z-index: 1;
+}
+.o-footer ul .m-footer__social {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.a-footer__nav__item, .a-footer__subnav__item {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  padding: 8px 0;
+}
+
+.a-footer__subnav__item {
+  font-weight: 300;
+}
+
+.a-footer__nav__item:not(:last-of-type),
+.a-footer__subnav__item:not(:last-of-type) {
+  border-bottom: 1px dotted #dfdfdf;
+  width: 100%;
+  display: block;
+}
+
+.a-newsLetter__title {
+  margin: 0;
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.a-newsLetter__text {
+  margin: 8px 0 12px;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.a-form__input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 100%;
+  padding: 0 10px;
+  border: 1px solid #d4d4d4;
+  border-right: none;
+}
+
+.a-form__button {
+  all: unset;
+  border: 1px solid #d4d4d4;
+  width: 45px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 12px 15px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.a-form__button:focus {
+  outline: auto;
+}
+.a-form__button img {
+  width: 10px;
+}
+
+.a-social__icon {
+  background: #000;
+  margin: 1%;
+  padding: 10px;
+  border-radius: 100%;
+}
+.a-social__icon a {
+  display: flex;
+}
+.a-social__icon img {
+  width: 20px;
+}
+
+.m-sponsors {
+  display: flex;
+  padding-top: 3.33rem;
+}
+.m-sponsors ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.m-sponsors ul .a-spons {
+  width: 90px;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.m-sponsors ul .a-spons img {
+  display: block;
+  width: 100%;
+}
+
+.a-copyright {
+  text-align: center;
+  margin-bottom: 1.11rem;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.85rem;
+  color: #575757;
+}
+
+@media screen and (max-width: 1240px) {
+  footer .col-3 {
+    margin-right: 1.25%;
+    margin-bottom: 1.25%;
+    width: 49.375%;
+  }
+  footer .col-3:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1180px) {
+  /*
+  *
+  * header
+  *
+  */
+  .o-header .m-header__navwrapper {
+    margin-bottom: 5rem;
+  }
+
+  /*
+  *
+  * cards
+  *
+  */
+  .o-announcements {
+    display: flex;
+    justify-content: space-between;
+  }
+  .o-announcements .m-socialCardButton {
+    margin-bottom: 5px;
+  }
+  .o-announcements .m-cardContainer.col-4 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.25%;
+  }
+  .o-announcements .m-cardContainer.col-4 .o-card {
+    margin-right: 1.25%;
+    margin-bottom: 1.25%;
+    width: 49.375%;
+    height: 95%;
+  }
+  .o-announcements .m-cardContainer.col-4 .o-card:nth-child(2n) {
+    margin-right: 0;
+  }
+  .o-announcements .col-12 {
+    margin-right: 1.25%;
+    margin-bottom: 1.25%;
+    width: 49.375%;
+  }
+  .o-announcements .col-12:nth-child(2n) {
+    margin-right: 0;
+  }
+  .o-announcements .col-8 {
+    margin-right: 0%;
+    margin-bottom: 0%;
+    width: 100%;
+  }
+  .o-announcements .col-8:nth-child(1n) {
+    margin-right: 0;
+  }
+  .o-announcements .col-4 {
+    margin-right: 1.25%;
+    margin-bottom: 1.25%;
+    width: 49.375%;
+    margin-right: 0;
+  }
+  .o-announcements .col-4:nth-child(2n) {
+    margin-right: 0;
+  }
+
+  /*
+  *
+  * list
+  *
+  */
+  .o-list .col-4 {
+    margin-right: 5%;
+    margin-bottom: 5%;
+    width: 100%;
+  }
+  .o-list .col-4:nth-child(1n) {
+    margin-right: 0;
+  }
+
+  /*
+  *
+  * news
+  *
+  */
+  .o-news main .row {
+    justify-content: flex-start;
+  }
+  .o-news .col-4 {
+    margin-right: 1.25%;
+    margin-bottom: 1.25%;
+    width: 49.375%;
+  }
+  .o-news .col-4:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 900px) {
+  .m-header__navwrapper {
+    flex-wrap: wrap;
+  }
+  .m-header__navwrapper .m-header__nav {
+    width: 100%;
+    margin-top: 50px;
+    text-align: center;
+  }
+  .m-header__navwrapper .m-header__nav .m-nav__toolbar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .m-header__navwrapper .m-header__nav .m-nav__main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  .m-header__navwrapper .m-header__nav li {
+    margin: 10px 3px;
+  }
+
+  html .container {
+    padding: 30px;
+  }
+
+  /*
+  *
+  * footer
+  *
+  */
+  footer {
+    text-align: center;
+  }
+  footer .col-3:nth-of-type(1n+3) {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    margin-top: 2.22rem;
+  }
+  footer .col-3:nth-of-type(1n+3):nth-child(1n) {
+    margin-right: 0;
+  }
+  footer .col-3:nth-of-type(1n+3) > * {
+    width: 100%;
+  }
+  footer .m-footer__social {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 680px) {
+  .m-header__img-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .m-header__img-container a {
+    margin: 0 auto;
+  }
+  .m-header__img-container .a-coordinator {
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  .o-header__concert-list {
+    flex-wrap: wrap;
+  }
+  .o-header__concert-list .m-concert-list__item {
+    width: 100%;
+  }
+  .o-header__concert-list .m-concert-list__item .a-showcase__tickets {
+    justify-content: center;
+  }
+
+  footer .col-3, .o-announcements .col-3, .o-news .col-3 {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    margin-bottom: 2.5%;
+  }
+  footer .col-3:nth-child(1n), .o-announcements .col-3:nth-child(1n), .o-news .col-3:nth-child(1n) {
+    margin-right: 0;
+  }
+  footer .col-4, .o-announcements .col-4, .o-news .col-4 {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    margin-bottom: 2.5%;
+  }
+  footer .col-4:nth-child(1n), .o-announcements .col-4:nth-child(1n), .o-news .col-4:nth-child(1n) {
+    margin-right: 0;
+  }
+  footer .m-cardContainer.col-4, .o-announcements .m-cardContainer.col-4, .o-news .m-cardContainer.col-4 {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    margin-top: 2.5%;
+    flex-wrap: wrap;
+  }
+  footer .m-cardContainer.col-4:nth-child(1n), .o-announcements .m-cardContainer.col-4:nth-child(1n), .o-news .m-cardContainer.col-4:nth-child(1n) {
+    margin-right: 0;
+  }
+  footer .m-cardContainer.col-4 .o-card, .o-announcements .m-cardContainer.col-4 .o-card, .o-news .m-cardContainer.col-4 .o-card {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    margin-bottom: 2.5%;
+    height: 47.75%;
+  }
+  footer .m-cardContainer.col-4 .o-card:nth-child(1n), .o-announcements .m-cardContainer.col-4 .o-card:nth-child(1n), .o-news .m-cardContainer.col-4 .o-card:nth-child(1n) {
+    margin-right: 0;
+  }
+
+  .o-tagList {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .o-tagList .a-tagList__tag {
+    margin-bottom: 0.5rem;
+  }
+}
+/*
+
+header title
+
+*/
+.a-header__title {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 3.37rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.a-header__title,
+.a-oTitle {
+  margin: 0;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+}
+.a-header__title::before, .a-header__title::after,
+.a-oTitle::before,
+.a-oTitle::after {
+  content: "";
+  width: 111.1rem;
+  height: 1px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 1.2rem);
+}
+.a-header__title::after,
+.a-oTitle::after {
+  right: unset;
+  left: calc(100% + 1.2rem);
+}
+
+.a-oTitle {
+  color: #575757;
+  margin-bottom: 1.11rem;
+  text-align: center;
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 300;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.a-oTitle::before, .a-oTitle::after {
+  border-bottom-color: #dfdfdf;
+}
+
+.o-announcements .row, .o-news .row {
+  justify-content: center;
+}
+
+.m-button {
+  border: 2px solid #000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 2px;
+  margin: 0 auto;
+  background: #fff;
+  transition: 0.5s;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.m-button::after {
+  content: "";
+  background: url("../img/arrow-btn.svg");
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  margin-left: 10px;
+}
+.m-button:hover {
+  background: #000;
+  color: #fff;
+}
+.m-button:hover::after {
+  content: "";
+  background: url("../img/arrow-btn-white.svg");
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+}
+
+.a-button__text {
+  margin: 0;
+}
+
+/*
+social media buttons
+*/
+.m-socialCard__buttons {
+  margin-top: 0.74rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.m-socialCardButton {
+  display: flex;
+  margin: 0 5px;
+  padding: 10px 14px;
+  border-radius: 2px;
+  color: #fff;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: 0.35s;
+}
+.m-socialCardButton:hover {
+  filter: brightness(108%);
+}
+
+.m-socialCardButton.spotify {
+  background: #1db954;
+}
+
+.m-socialCardButton.fb {
+  background: #4267b2;
+}
+
+.o-announcements {
+  padding: 3.33rem 0;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.o-announcements::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -40px;
+  left: calc(50% - 20px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 20px solid transparent;
+  border-top-color: #fff;
+}
+
+.o-card {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #dfdfdf;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+.o-card :hover img {
+  transform: scale(1.5);
+}
+
+.o-card:hover img,
+.o-bigCard:hover img {
+  transform: scale(1.02);
+}
+
+.o-card::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(to top, rgba(33, 32, 30, 0.95), rgba(33, 32, 30, 0.6), rgba(33, 32, 30, 0), rgba(33, 32, 30, 0.5));
+  opacity: 0.7;
+  transition: 0.2s;
+  z-index: 0;
+}
+
+.o-card:hover::after {
+  opacity: 1;
+}
+
+.o-socialCard {
+  background: #f5f5f5;
+  padding: 0.74rem;
+  box-sizing: border-box;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.o-socialCard p {
+  margin: 0;
+}
+.o-socialCard::after {
+  all: unset;
+}
+
+/*
+
+announcements cards
+
+*/
+.m-card__info, .m-card__extra {
+  position: absolute;
+  bottom: 0.74rem;
+  left: 0.74rem;
+  color: #fff;
+  z-index: 1;
+}
+.m-card__info *, .m-card__extra * {
+  margin: 0;
+}
+
+.m-card__extra {
+  top: 0.74rem;
+  left: 0.74rem;
+}
+
+.m-cardContainer.col-4 {
+  margin: 0;
+}
+
+.m-cardContainer .o-card {
+  height: 47.5%;
+}
+
+.a-showcase__date, .a-card__info__date {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.12rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.a-showcase__title, .a-card__info__title {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 4px 0;
+}
+
+.a-showcase__tickets, .a-card__info__tickets {
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  display: flex;
+  margin-top: 10px;
+}
+.a-showcase__tickets::before, .a-card__info__tickets::before {
+  content: "";
+  background: url("../img/ticket.svg");
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  width: 15px;
+  height: 15px;
+  margin-right: 7px;
+}
+
+/*
+
+cards
+
+*/
+.a-card__img {
+  width: 100%;
+  z-index: 0;
+  object-fit: cover;
+  transition: 0.5s;
+}
+
+.a-extra__text {
+  position: relative;
+  display: flex;
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 300;
+  font-size: 1.34rem;
+  text-transform: uppercase;
+}
+.a-extra__text::before {
+  content: "";
+  background: url("../img/ab-icon.svg");
+  display: block;
+  height: 26px;
+  width: 26px;
+  background-repeat: no-repeat;
+  position: relative;
+  margin-right: 5px;
+}
+
+.a-card__info__tickets {
+  position: relative;
+  display: flex;
+}
+.a-card__info__tickets::before {
+  content: "";
+  background: url("../img/ticket.svg");
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  top: 2px;
+  margin-right: 6px;
+  position: relative;
+}
+
+.a-card__volume {
+  display: block;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0.74rem;
+  top: 0.74rem;
+  background: #000;
+  border-radius: 100%;
+  opacity: 0.7;
+  border: 2px solid #dfdfdf;
+}
+.a-card__volume::after {
+  content: "";
+  background: url("../img/sound.svg");
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.a-socialCard__text {
+  color: #575757;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.a-socialCardButton__icon {
+  height: 16px;
+  margin-right: 5px;
+  display: block;
+}
+
+/*
+*
+* news
+*
+*/
+.o-news {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  background: #f5f5f5;
+  padding: 3.33rem 0;
+}
+
+.o-news .row img {
+  width: 100%;
+}
+
+.o-news__card {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 2px solid #dfdfdf;
+}
+
+.o-news__card:hover img {
+  transform: scale(1.02);
+}
+
+.o-tagList.container {
+  padding: 0;
+  display: flex;
+  margin: 20px auto 40px;
+}
+
+.o-list {
+  padding: 3.33rem 0;
+}
+
+.m-newscard__container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.m-newscard__imgcontainer {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+}
+.m-newscard__imgcontainer::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: linear-gradient(to top, rgba(33, 32, 30, 0.95), rgba(33, 32, 30, 0.6), rgba(33, 32, 30, 0), rgba(33, 32, 30, 0.5));
+  opacity: 0.7;
+  transition: 0.2s;
+  z-index: 0;
+}
+
+.o-news__card:hover .m-newscard__imgcontainer::after {
+  opacity: 1;
+}
+
+.m-newscard__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 0.74rem;
+  background: #fff;
+}
+
+.m-list__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.m-footer__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-footer_item__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-newsLetter__form {
+  display: flex;
+  width: 100%;
+}
+
+.a-newscard__tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1px 5px;
+  background: rgba(17, 17, 17, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.a-newscard__img {
+  transition: 0.2s;
+}
+
+.a-newscard__img:hover {
+  transform: scale(1.5);
+}
+
+.a-newscard__date {
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #575757;
+}
+
+.a-newscard__title {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  margin: 8px 0 14px;
+}
+
+.a-tagList__tag {
+  display: flex;
+  padding: 2px 5px;
+  margin: 0 5px;
+  background: #fff;
+  border-radius: 2px;
+  border: 1px solid #dfdfdf;
+  transition: 0.2s;
+}
+.a-tagList__tag:hover {
+  background: transparent;
+}
+
+.a-newscard__more {
+  color: #d50000;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  display: flex;
+}
+.a-newscard__more::after {
+  content: "";
+  background: url("../img/arrow-btn-accent.svg");
+  display: block;
+  height: 12px;
+  width: 12px;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 4px;
+  left: 8px;
+}
+
+.m-list__card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.m-footer__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-footer_item__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-newsLetter__form {
+  display: flex;
+  width: 100%;
+}
+
+.a-list__card__title,
+.a-list__card__text,
+.a-list__card__cta {
+  margin: 5px auto;
+  width: 100%;
+}
+
+.a-list__card__title {
+  font-family: "Oswald", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.a-list__card__text {
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: #575757;
+}
+
+.a-list__card__cta {
+  color: #d50000;
+  margin-top: 1.48rem;
+  display: flex;
+  justify-content: center;
+  font-family: "Lato", "arial", sans-serif;
+  font-weight: 700;
+  font-size: 1.13rem;
+}
+.a-list__card__cta::after {
+  content: "";
+  background: url("../img/arrow-btn-accent.svg");
+  display: block;
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  position: relative;
+  left: 6px;
+  top: 3px;
+}
+
+.a-list__card__icon {
+  width: 35px;
+  margin: 10px auto;
+}
+
+/*
+
+basics
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+}
+
+.container {
+  max-width: 1500px;
+  padding: 50px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  justify-content: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

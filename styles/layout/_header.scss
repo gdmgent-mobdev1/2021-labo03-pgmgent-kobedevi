@@ -1,0 +1,190 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.o-header {
+	position: relative;
+	display: flex;
+	width: 100%;
+	margin: 0;
+	padding: vars.$spacer;
+	background: url("../img/masthead.jpg") center center no-repeat;
+	background-size: cover;
+	@include mix.border-box;
+
+	* {
+		z-index: vars.$layer1;
+		color: vars.$white;
+	}
+
+	.col-12 {
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0;
+	}
+	
+	&::after {
+		@include mix.triangle(vars.$black);
+    }
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background: linear-gradient(to bottom, rgba(33, 32, 30, 0.9), rgba(33, 32, 30, 0.5), rgba(33, 32, 30, 0.6), #21201e);
+        z-index: vars.$layer0;
+    }
+}
+
+.o-header__concert-list {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+/*
+===============
+---molecules---
+===============
+*/
+
+.m-header__navwrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	margin-bottom: 12.5rem;
+}
+
+.m-header__img-container {
+	display: flex;
+	align-items: flex-start;
+}
+
+.m-header__nav {
+	align-self: flex-start;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+.m-nav__toolbar {
+	@include mix.plaintext(1rem, 700);
+}
+
+.m-nav__main {
+	@include mix.bigtext(1.63rem, 500, "y");
+	position: relative;
+	margin-top: 2rem;
+
+	li {
+		margin-left: 1rem;
+	}
+}
+
+.m-concert-list__item {
+	margin: vars.$spacer (vars.$spacer / 2);
+	text-align: center;
+}
+
+/*
+=============
+----atoms----
+=============
+*/
+
+.a-logo {
+	width: 114px;
+}
+
+.a-coordinator {
+	margin-left: vars.$spacer;
+	width: 114px;
+}
+
+
+/*
+
+header navigation
+
+*/
+
+.a-toolbar__login,
+.a-toolbar__lang {
+	position: relative;
+	padding-right: vars.$spacer / 1.8;
+}
+
+.a-toolbar__login {
+	margin-right: 1rem;
+}
+
+// login icon
+.a-toolbar__login::after,
+.a-toolbar__lang::after {
+	content: "";
+	width: (1rem / 3) * 2.5;
+	height: (1rem / 3) * 2.5;
+	display: flex;
+	margin: 0;
+	border-radius: 100%;
+	background: vars.$white url("../img/profile.svg") no-repeat 50% 50%;
+	position: absolute;
+	right: 0;
+	bottom: 10%;
+}
+
+// language icon
+.a-toolbar__lang::after {
+	background: url("../img/arrow-down.svg") no-repeat 50% 50%;
+}
+
+// nav active bar
+.a-main__link.active::after {
+	content: "";
+	height: 3px;
+	width: 100%;
+	display: block;
+	background: vars.$white;
+}
+
+// search icon
+.a-main__search {
+	position: relative;
+	bottom: 0;
+	width: 25px;
+}
+
+// concert showcase
+.a-showcase__date, .a-card__info__date {
+	@include mix.bigtext(1.12rem, 700, "y");
+	margin: 0;
+}
+
+.a-showcase__title, .a-card__info__title {
+	@include mix.bigtext(1.5rem, 700, "y");
+	margin: 4px 0;
+}
+
+.a-showcase__tickets, .a-card__info__tickets {
+	@include mix.plaintext(1rem, 400);
+	display: flex;
+	margin-top: 10px;
+
+	&::before {
+		@include mix.icon("../img/ticket.svg",15);
+		width: 15px;
+		height: 15px;
+		margin-right: 7px;
+	}
+}
+
+
+.title {
+	overflow: hidden;
+}
+
+
+
+

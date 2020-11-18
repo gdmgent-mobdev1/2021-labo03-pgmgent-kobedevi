@@ -1,0 +1,218 @@
+@use "./variables" as vars;
+@use "../layout/grid" as grid;
+
+@media screen and (max-width: vars.$screen-xl) {
+
+	footer {
+		
+		.col-3 {
+			@include grid.grid(2, 1.25%);
+		}
+	}
+}
+@media screen and (max-width: vars.$screen-lg) {
+	/*
+	*
+	* header
+	*
+	*/
+
+	.o-header {
+
+		.m-header__navwrapper {
+			margin-bottom: 5rem;
+		}
+	}
+
+	/*
+	*
+	* cards
+	*
+	*/
+
+	.o-announcements {
+		display: flex;
+		justify-content: space-between;
+
+		.m-socialCardButton {
+			margin-bottom: 5px;
+		}
+
+		.m-cardContainer.col-4 {
+			width: 100%;
+			display: flex;
+			justify-content: space-between;
+			margin-top: 1.25%;
+
+			.o-card {
+				@include grid.grid(2, 1.25%);
+				height: 95%;
+			}
+		}
+
+		.col-12 {
+			@include grid.grid(2, 1.25%);	
+		}
+
+		.col-8 {
+			@include grid.grid(1, 0%);
+		}
+
+		.col-4 {
+			@include grid.grid(2, 1.25%);
+			margin-right: 0;
+		}
+	}
+
+	/*
+	*
+	* list
+	*
+	*/
+
+	.o-list {
+
+		.col-4 {
+			@include grid.grid(1, 5%);
+		}
+	}
+
+	/*
+	*
+	* news
+	*
+	*/
+
+	.o-news {
+
+		main {
+			
+			.row {
+				justify-content: flex-start;
+			}
+		}
+
+		.col-4 {
+			@include grid.grid(2, 1.25%);
+		}
+	}
+}
+@media screen and (max-width: vars.$screen-md) {
+
+	.m-header__navwrapper {
+		flex-wrap: wrap;
+
+		.m-header__nav {
+			width: 100%;
+			margin-top: 50px;
+			text-align: center;
+
+			.m-nav__toolbar {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+
+			.m-nav__main {
+				display: flex;
+				width: 100%;
+				justify-content: center;
+			}
+
+			li {
+				margin: 10px 3px;
+			}
+		}
+	}
+
+	html .container {
+		padding: 30px;
+	}
+
+	/*
+	*
+	* footer
+	*
+	*/
+
+	footer {
+		text-align: center;
+
+		.col-3:nth-of-type(1n+3) {
+			@include grid.grid(1, 0);
+			margin-top: vars.$spacer;
+
+			& > * {
+				width: 100%;
+			}
+		}
+
+		.m-footer__social {
+			justify-content: center;
+		}
+	}
+}
+@media screen and (max-width: vars.$screen-sm) {
+
+	.m-header__img-container {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		a {
+			margin: 0 auto;
+		}
+
+		.a-coordinator {
+			margin-top: 15px;
+			margin-left: 0;
+		}
+	}
+
+	.o-header__concert-list {
+		flex-wrap: wrap;
+
+		.m-concert-list__item {
+			width: 100%;
+			
+			.a-showcase__tickets {
+				justify-content: center;
+			}
+		}
+	}
+
+	footer, .o-announcements, .o-news {
+
+		.col-3 {
+			@include grid.grid(1, 0);
+			margin-bottom: 2.5%;
+		}
+
+		.col-4 {
+			@include grid.grid(1, 0);
+			margin-bottom: 2.5%;
+		}
+
+		.m-cardContainer.col-4 {
+			@include grid.grid(1, 0);
+			margin-top: 2.5%;
+			flex-wrap: wrap;
+			
+			.o-card {
+				@include grid.grid(1, 0);
+				margin-bottom: 2.5%;
+				height: 47.75%;
+			}
+		}
+	}
+
+	.o-tagList {
+		flex-wrap: wrap;
+		justify-content: center;
+
+		.a-tagList__tag {
+			margin-bottom: 0.5rem;
+		}
+	}
+}

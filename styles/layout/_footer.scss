@@ -1,0 +1,128 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.o-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: vars.$background-color-secondary;
+	padding: vars.$spacer*1.5 0;
+
+	ul {
+		width: 100%;
+		display: flex;
+
+		* {
+			z-index: vars.$layer1;
+        }
+        
+        .m-footer__social {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}
+
+.a-footer__nav__item, .a-footer__subnav__item {
+	@include mix.bigtext(1.3rem, 700, "y");
+	padding: 8px 0;
+}
+
+.a-footer__subnav__item {
+	font-weight: 300;
+}
+
+.a-footer__nav__item:not(:last-of-type),
+.a-footer__subnav__item:not(:last-of-type) {
+	border-bottom: 1px dotted vars.$border-color;
+	width: 100%;
+	display: block;
+}
+
+.a-newsLetter__title {
+	margin: 0;
+	@include mix.bigtext(1.3rem, 700, "y");
+}
+
+.a-newsLetter__text {
+	margin: 8px 0 12px;
+	@include mix.plaintext(1rem, 400);
+}
+
+.a-form__input {
+	@include mix.border-box;
+	flex-grow: 1;
+	flex-shrink: 1;
+	width: 100%;
+	padding: 0 10px;
+	border: 1px solid vars.$border-color-secondary;
+	border-right: none;
+}
+
+.a-form__button {
+	all: unset;
+	border: 1px solid vars.$border-color-secondary;
+	width: 45px;
+	@include mix.border-box;
+	padding: 12px 15px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	&:focus {
+		outline: auto;
+	}
+
+	img {
+		width: 10px;
+	}
+}
+
+.a-social__icon {
+	background: vars.$black;
+	margin: 1%;
+	padding: 10px;
+	border-radius: 100%;
+
+	a {
+		display: flex;
+	}
+
+	img {
+		width: 20px;
+	}
+}
+
+
+// adblock blocks rendering of .sponsor
+
+
+.m-sponsors {
+	display: flex;
+	padding-top: vars.$spacer*1.5;
+	ul {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+        justify-content: center;
+        
+        .a-spons {
+            width: 90px;
+            flex-wrap: wrap;
+            margin: 10px;
+        
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+	}
+}
+
+// copyright
+.a-copyright {
+	text-align: center;
+	margin-bottom: vars.$spacer/2;
+	@include mix.plaintext(0.85rem, 400);
+	color: vars.$text-color-primary;
+}

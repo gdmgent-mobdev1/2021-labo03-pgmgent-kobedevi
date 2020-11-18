@@ -1,0 +1,68 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.m-button {
+	border: 2px solid vars.$black;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	border-radius: 2px;
+	margin: 0 auto;
+	background: vars.$white;
+	transition: 0.5s;
+	@include mix.plaintext(1rem, 700);
+
+	&::after {
+		@include mix.icon("../img/arrow-btn.svg", 15);
+		margin-left: 10px;
+	}
+
+	&:hover {
+		background: vars.$black;
+		color: vars.$white;
+
+		&::after {
+			@include mix.icon("../img/arrow-btn-white.svg", 15);
+		}
+	}
+}
+
+.a-button__text {
+	margin: 0;
+}
+
+/*
+social media buttons
+*/
+
+.m-socialCard__buttons {
+	margin-top: vars.$spacer / 3;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.m-socialCardButton {
+	display: flex;
+	margin: 0 5px;
+	padding: 10px 14px;
+	border-radius: 2px;
+	color: vars.$white;
+	@include mix.plaintext(1rem, 700);
+	transition: 0.35s;
+
+	&:hover {
+		filter: brightness(108%);
+	}
+}
+
+.m-socialCardButton.spotify {
+	background: #1db954;
+}
+
+
+.m-socialCardButton.fb {
+	background: #4267b2;
+}

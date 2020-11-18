@@ -1,0 +1,154 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+/*
+*
+* news
+*
+*/
+
+.o-news {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	background: vars.$background-color-secondary;
+	padding: vars.$spacer*1.5 0;
+}
+
+.o-news .row {
+
+	img {
+		width: 100%;
+	}	
+}
+
+.o-news__card {
+	@include mix.border-box;
+	border: 2px solid vars.$border-color;
+}
+
+.o-news__card:hover {
+
+	img {
+		transform: scale(1.02);
+	}
+}
+
+.o-tagList.container {
+	padding: 0;
+	display: flex;
+	margin: 20px auto 40px;
+}
+
+.o-list {
+	padding: vars.$spacer*1.5 0;
+}
+
+.m-newscard__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.m-newscard__imgcontainer {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+
+	&::after {
+		@include mix.imgShadow;
+	}
+}
+
+.o-news__card:hover {
+	
+	.m-newscard__imgcontainer::after {
+		opacity: 1;
+	}
+}
+
+.m-newscard__info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+	padding: vars.$spacer / 3;
+	background: vars.$background-color-primary;
+}
+
+.m-list__card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.m-footer__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.m-footer_item__nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.m-newsLetter__form {
+	display: flex;
+	width: 100%;
+}
+
+.a-newscard__tag {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 1px 5px;
+	background: rgba(17, 17, 17, 0.3);
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	color: vars.$white;
+	@include mix.plaintext(0.9rem, 700);
+}
+
+.a-newscard__img {
+	transition: 0.2s;
+}
+
+.a-newscard__img:hover {
+	transform: scale(1.5);
+}
+
+.a-newscard__date {
+	@include mix.plaintext(1rem, 400);
+	color: vars.$text-color-primary;
+}
+
+.a-newscard__title {
+	@include mix.bigtext(1.3rem, 700, "y");
+	margin: 8px 0 14px;
+}
+
+.a-tagList__tag {
+	display: flex;
+	padding: 2px 5px;
+	margin: 0 5px;
+	background: #fff;
+	border-radius: 2px;
+	border: 1px solid vars.$border-color;
+	transition: 0.2s;
+
+	&:hover {
+		background: transparent;
+	}
+}
+
+// read more button
+.a-newscard__more {
+	color: vars.$accent;
+	@include mix.plaintext(1rem, 700);
+	display: flex;
+
+	&::after {
+		@include mix.icon("../img/arrow-btn-accent.svg", 12);
+		position: relative;
+		top: 4px;
+		left: 8px;
+	}
+}

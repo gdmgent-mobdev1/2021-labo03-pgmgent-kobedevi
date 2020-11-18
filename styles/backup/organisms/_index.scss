@@ -1,0 +1,215 @@
+// Barrel use for Organisms
+// ------------------------------------------------------------------------- /
+
+@use "../utils/_mixins.scss";
+@use "../utils/_index.scss";
+
+/*
+* header
+*/
+
+.o-header {
+	position: relative;
+	display: flex;
+	width: 100%;
+	margin: 0;
+	padding: $spacer;
+	background: url("../img/masthead.jpg") center center no-repeat;
+	background-size: cover;
+	@include border-box;
+
+	* {
+		z-index: $layer1;
+		color: $white;
+	}
+
+	.col-12 {
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 0;
+	}
+	
+	&::after {
+		@include triangle($black);
+	}
+}
+
+// shadow over image
+// cant't place before inside the above selector, bugs out z-index
+.o-header::before {
+	content: "";
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: linear-gradient(to bottom, rgba(33, 32, 30, 0.9), rgba(33, 32, 30, 0.5), rgba(33, 32, 30, 0.6), #21201e);
+	z-index: $layer0;
+}
+
+.o-header__concert-list {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+/*
+*
+* end header
+*
+*/
+
+
+/*
+*
+* announcements
+*
+*/
+
+
+.o-announcements {
+	padding: $spacer*1.5 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.o-announcements::after {
+	@include triangle($background-color-primary);
+}
+
+.o-card {
+	@include border-box;
+	border: 2px solid $border-color;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+
+	:hover img {
+		transform: scale(1.5);
+	}
+}
+
+.o-card:hover img,
+.o-bigCard:hover img {
+	transform: scale(1.02);
+}
+
+.o-card::after {
+	@include imgShadow;
+}
+
+.o-card:hover::after {
+	opacity: 1;
+}
+
+.o-announcements, .o-news {
+
+	.row {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.title {
+	overflow: hidden;
+}
+
+.o-socialCard {
+	background: $background-color-secondary;
+	padding: $spacer / 3;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+
+	& p {
+		margin: 0;
+	}
+
+	&::after {
+		all: unset;
+	}
+}
+
+/*
+*
+* end announcements
+*
+*/
+
+
+/*
+*
+* news
+*
+*/
+
+.o-news {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	background: $background-color-secondary;
+	padding: $spacer*1.5 0;
+}
+
+.o-news .row {
+
+	img {
+		width: 100%;
+	}	
+}
+
+.o-news__card {
+	@include border-box;
+	border: 2px solid $border-color;
+}
+
+.o-news__card:hover {
+
+	img {
+		transform: scale(1.02);
+	}
+}
+
+.o-tagList.container {
+	padding: 0;
+	display: flex;
+	margin: 20px auto 40px;
+}
+
+.o-list {
+	padding: $spacer*1.5 0;
+}
+
+
+/*
+*
+* end news
+*
+*/
+
+
+/*
+*
+* footer
+*
+*/
+
+.o-footer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: $background-color-secondary;
+	padding: $spacer*1.5 0;
+
+	ul {
+		width: 100%;
+		display: flex;
+
+		* {
+			z-index: $layer1;
+		}
+	}
+}

@@ -1,0 +1,181 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.o-announcements {
+	padding: vars.$spacer*1.5 0;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.o-announcements::after {
+	@include mix.triangle(vars.$background-color-primary);
+}
+
+.o-card {
+	@include mix.border-box;
+	border: 2px solid vars.$border-color;
+	position: relative;
+	overflow: hidden;
+	cursor: pointer;
+
+	:hover img {
+		transform: scale(1.5);
+	}
+}
+
+.o-card:hover img,
+.o-bigCard:hover img {
+	transform: scale(1.02);
+}
+
+.o-card::after {
+	@include mix.imgShadow;
+}
+
+.o-card:hover::after {
+	opacity: 1;
+}
+
+.o-socialCard {
+	background: vars.$background-color-secondary;
+	padding: vars.$spacer / 3;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-content: center;
+
+	& p {
+		margin: 0;
+	}
+
+	&::after {
+		all: unset;
+	}
+}
+
+/*
+
+announcements cards
+
+*/
+
+.m-card__info, .m-card__extra {
+	position: absolute;
+	bottom: vars.$spacer / 3;
+	left: vars.$spacer / 3;
+	color: vars.$white;
+	z-index: vars.$layer1;
+
+	* {
+		margin: 0;
+	}
+}
+
+.m-card__extra {
+	top: vars.$spacer / 3;
+	left: vars.$spacer / 3;
+}
+
+.m-cardContainer.col-4 {
+	margin: 0;
+}
+
+.m-cardContainer .o-card {
+	height: 50% - 2.5%;
+}
+
+// concert showcase
+.a-showcase__date, .a-card__info__date {
+	@include mix.bigtext(1.12rem, 700, "y");
+	margin: 0;
+}
+
+.a-showcase__title, .a-card__info__title {
+	@include mix.bigtext(1.5rem, 700, "y");
+	margin: 4px 0;
+}
+
+.a-showcase__tickets, .a-card__info__tickets {
+	@include mix.plaintext(1rem, 400);
+	display: flex;
+	margin-top: 10px;
+
+	&::before {
+		@include mix.icon("../img/ticket.svg",15);
+		width: 15px;
+		height: 15px;
+		margin-right: 7px;
+	}
+}
+
+/*
+
+cards
+
+*/
+
+.a-card__img {
+	width: 100%;
+	z-index: vars.$layer0;
+	object-fit: cover;
+	transition: 0.5s;
+}
+
+.a-extra__text {
+	position: relative;
+	display: flex;
+	@include mix.bigtext(1.34rem, 300, "y");
+
+	&::before {
+		@include mix.icon("../img/ab-icon.svg", 26);
+		position: relative;
+		margin-right: 5px;
+	}
+}
+
+.a-card__info__tickets {
+	position: relative;
+	display: flex;
+
+	&::before {
+		@include mix.icon("../img/ticket.svg", 15);
+		top: 2px;
+		margin-right: 6px;
+		position: relative;
+	}
+}
+
+// volume icon in card
+.a-card__volume {
+	display: block;
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	right: vars.$spacer / 3;
+	top: vars.$spacer / 3;
+	background: vars.$black;
+	border-radius: 100%;
+	opacity: 0.7;
+	border: 2px solid vars.$border-color;
+
+	&::after {
+		@include mix.icon("../img/sound.svg", 15);
+		position: absolute;
+		top: 5px;
+		left: 5px;
+	}
+}
+
+.a-socialCard__text {
+	color: vars.$text-color-primary;
+	@include mix.plaintext(1rem, 400);
+}
+
+.a-socialCardButton__icon {
+	height: 16px;
+	margin-right: 5px;
+	display: block;
+}

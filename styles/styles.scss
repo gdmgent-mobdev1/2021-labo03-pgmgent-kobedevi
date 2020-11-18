@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+// Themes (heb ik ni)
+
+// Vendors
+@use "./vendors/normalize.scss";
+
+// Base
+@use "./base/_base";
+@use "./base/fonts";
+@use "./base/helpers";
+@use "./base/typography";
+
+// Layout
+@use "./layout/grid";
+@use "./layout/header";
+@use "./layout/footer";
+
+// components
+
+// pages
+@use "./pages/home.scss";
+
+/*
+
+basics
+
+*/
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	display: inline-block;
+}
+
+.container {
+	max-width: 1500px;
+	padding: 50px;
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+	justify-content: center;
+}

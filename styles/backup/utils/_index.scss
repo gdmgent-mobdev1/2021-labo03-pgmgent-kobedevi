@@ -1,0 +1,63 @@
+// Barrel use for Utils
+// ------------------------------------------------------------------------- /
+@use "./_functions.scss";
+@use "./_mixins.scss";
+@use "./_layout.scss";
+
+// grid columns
+$columns: 12;
+
+// spacing
+$spacer: 2.22rem;
+
+// z-index
+$layer0: 0;
+$layer1: 1;
+
+@for $i from 1 through $columns {
+	.col-#{$i} {
+		width: 100% / ($columns/$i);
+		display: flex;
+		align-content: flex-start;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+@mixin grid($columns,$mgn) {
+	margin-right: $mgn;
+	margin-bottom: $mgn;
+	width: ((100% - (($columns - 1) * $mgn)) / $columns);
+	@if $columns == 1.5{
+		&:nth-child(1) {
+			margin-right: 0;
+		}
+	}
+	@else {
+		&:nth-child(#{$columns}n) {
+			margin-right: 0;
+		}
+	}
+}
+
+.col-3 {
+	@include grid(4, 1.25%);
+}
+
+.col-4 {
+	@include grid(3, 1.25%);
+}
+
+.col-8 {
+	@include grid(1.5, 1.25%);
+}
+
+.col-12 {
+	@include grid(1, 2.5%);
+}

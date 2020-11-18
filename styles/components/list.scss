@@ -1,0 +1,59 @@
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.m-list__card {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+}
+
+.m-footer__item {
+	display: flex;
+	flex-direction: column;
+}
+
+.m-footer_item__nav {
+	display: flex;
+	flex-direction: column;
+}
+
+.m-newsLetter__form {
+	display: flex;
+	width: 100%;
+}
+
+.a-list__card__title,
+.a-list__card__text,
+.a-list__card__cta {
+	margin: 5px auto;
+	width: 100%;
+}
+
+.a-list__card__title {
+	@include mix.bigtext(1.5rem, 700, "y");
+}
+
+.a-list__card__text {
+	@include mix.plaintext(1rem, 400);
+	color: vars.$text-color-primary;
+}
+
+.a-list__card__cta {
+	color: vars.$accent;
+	margin-top: vars.$spacer / 1.5;
+	display: flex;
+	justify-content: center;
+	@include mix.plaintext(1.13rem, 700);
+
+	&::after {
+		@include mix.icon("../img/arrow-btn-accent.svg", 15);
+		position: relative;
+		left: 6px;
+		top: 3px;
+	}
+}
+
+.a-list__card__icon {
+	width: 35px;
+	margin: 10px auto;
+}
