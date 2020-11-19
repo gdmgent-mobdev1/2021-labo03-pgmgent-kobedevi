@@ -1,11 +1,27 @@
+@use "sass:math";
 // rem(px)
 // ---
 // Converts a pixel value to rem-units
 // ------------------------------------------------------------------------- /
 @function rem($px) {
 	$rem: $px / 16px;
-
 	@return #{$rem}rem;
+}
+
+@function mathFloor($value) {
+	$output: math.floor($value);
+	@return #{$output};
+}
+
+@function toNOrNotToN($value) {
+	$isRound: $value % 1;
+	$temp: $value;
+	@if($isRound > 0) {
+		$temp: #{mathFloor($value)};
+	} @else {
+		$temp: #{$value}n;
+	}
+	@return $temp;
 }
 
 // layer(name)

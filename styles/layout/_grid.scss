@@ -1,19 +1,15 @@
 @use "../abstracts/variables" as vars;
+@use "../abstracts/functions" as func;
 
+// grid concept, stolen from netninja
 @mixin grid($columns,$mgn) {
 	margin-right: $mgn;
 	margin-bottom: $mgn;
 	width: ((100% - (($columns - 1) * $mgn)) / $columns);
-	@if $columns == 1.5{
-		&:nth-child(1) {
-			margin-right: 0;
-		}
+	&:nth-child(#{func.toNOrNotToN($columns)}) {
+		margin-right: 0;
 	}
-	@else {
-		&:nth-child(#{$columns}n) {
-			margin-right: 0;
-		}
-	}
+
 }
 
 .row{
