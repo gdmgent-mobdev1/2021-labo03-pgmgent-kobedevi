@@ -58,11 +58,8 @@ social media buttons
 	}
 }
 
-.m-socialCardButton.spotify {
-	background: #1db954;
-}
-
-
-.m-socialCardButton.fb {
-	background: #4267b2;
+.m-socialCard__buttons{
+	@each $key, $color in vars.$button_colors{
+		.#{$key} {background-color: $color;}
+	}
 }
