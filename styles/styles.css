@@ -596,6 +596,36 @@ header navigation
   overflow: hidden;
 }
 
+.m-list__card, .m-footer__item, .m-footer_item__nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-sponsors ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.a-newscard__tag {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.a-card__volume {
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  border: 2px solid #dfdfdf;
+}
+
+.m-sponsors ul .a-spons .spons1, .m-sponsors ul .a-spons .spons2, .m-sponsors ul .a-spons .spons3, .m-sponsors ul .a-spons .spons4, .m-sponsors ul .a-spons .spons5, .m-sponsors ul .a-spons .spons6, .m-sponsors ul .a-spons .spons7, .m-sponsors ul .a-spons .spons8, .m-sponsors ul .a-spons .spons9, .m-sponsors ul .a-spons .spons10, .m-sponsors ul .a-spons .spons11, .m-sponsors ul .a-spons .spons12, .m-sponsors ul .a-spons .spons13, .m-sponsors ul .a-spons .spons14, .m-sponsors ul .a-spons .spons15, .m-sponsors ul .a-spons .spons16 {
+  width: 90px;
+  height: 90px;
+  display: block;
+}
+
 .o-footer {
   display: flex;
   flex-direction: row;
@@ -699,18 +729,58 @@ header navigation
 }
 .m-sponsors ul {
   width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
 }
 .m-sponsors ul .a-spons {
-  width: 90px;
   flex-wrap: wrap;
   margin: 10px;
 }
-.m-sponsors ul .a-spons img {
-  display: block;
-  width: 100%;
+.m-sponsors ul .a-spons .spons1 {
+  background-image: url("https://picsum.photos/id/10/90/90");
+}
+.m-sponsors ul .a-spons .spons2 {
+  background-image: url("https://picsum.photos/id/12/90/90");
+}
+.m-sponsors ul .a-spons .spons3 {
+  background-image: url("https://picsum.photos/id/88/90/90");
+}
+.m-sponsors ul .a-spons .spons4 {
+  background-image: url("https://picsum.photos/id/77/90/90");
+}
+.m-sponsors ul .a-spons .spons5 {
+  background-image: url("https://picsum.photos/id/2/90/90");
+}
+.m-sponsors ul .a-spons .spons6 {
+  background-image: url("https://picsum.photos/id/1/90/90");
+}
+.m-sponsors ul .a-spons .spons7 {
+  background-image: url("https://picsum.photos/id/27/90/90");
+}
+.m-sponsors ul .a-spons .spons8 {
+  background-image: url("https://picsum.photos/id/120/90/90");
+}
+.m-sponsors ul .a-spons .spons9 {
+  background-image: url("https://picsum.photos/id/125/90/90");
+}
+.m-sponsors ul .a-spons .spons10 {
+  background-image: url("https://picsum.photos/id/8/90/90");
+}
+.m-sponsors ul .a-spons .spons11 {
+  background-image: url("https://picsum.photos/id/35/90/90");
+}
+.m-sponsors ul .a-spons .spons12 {
+  background-image: url("https://picsum.photos/id/105/90/90");
+}
+.m-sponsors ul .a-spons .spons13 {
+  background-image: url("https://picsum.photos/id/18/90/90");
+}
+.m-sponsors ul .a-spons .spons14 {
+  background-image: url("https://picsum.photos/id/51/90/90");
+}
+.m-sponsors ul .a-spons .spons15 {
+  background-image: url("https://picsum.photos/id/95/90/90");
+}
+.m-sponsors ul .a-spons .spons16 {
+  background-image: url("https://picsum.photos/id/135/90/90");
 }
 
 .a-copyright {
@@ -1069,12 +1139,11 @@ social media buttons
   filter: brightness(108%);
 }
 
-.m-socialCardButton.spotify {
-  background: #1db954;
+.m-socialCard__buttons .spotify {
+  background-color: #1db954;
 }
-
-.m-socialCardButton.fb {
-  background: #4267b2;
+.m-socialCard__buttons .fb {
+  background-color: #4267b2;
 }
 
 .o-announcements {
@@ -1261,16 +1330,12 @@ cards
 }
 
 .a-card__volume {
-  display: block;
-  position: absolute;
   width: 30px;
   height: 30px;
   right: 0.74rem;
   top: 0.74rem;
   background: #000;
-  border-radius: 100%;
   opacity: 0.7;
-  border: 2px solid #dfdfdf;
 }
 .a-card__volume::after {
   content: "";
@@ -1373,19 +1438,7 @@ cards
 }
 
 .m-list__card {
-  display: flex;
-  flex-direction: column;
   text-align: center;
-}
-
-.m-footer__item {
-  display: flex;
-  flex-direction: column;
-}
-
-.m-footer_item__nav {
-  display: flex;
-  flex-direction: column;
 }
 
 .m-newsLetter__form {
@@ -1394,9 +1447,6 @@ cards
 }
 
 .a-newscard__tag {
-  position: absolute;
-  top: 0;
-  left: 0;
   padding: 1px 5px;
   background: rgba(17, 17, 17, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -1462,8 +1512,6 @@ cards
 }
 
 .m-list__card {
-  display: flex;
-  flex-direction: column;
   text-align: center;
 }
 

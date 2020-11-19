@@ -1,5 +1,7 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mix;
+@use "../abstracts/extends";
+@use "sass:math";
 
 .o-footer {
 	display: flex;
@@ -21,6 +23,14 @@
             justify-content: flex-end;
         }
     }
+}
+
+.m-footer__item {
+	@extend %flex-column;
+}
+
+.m-footer_item__nav {
+	@extend %flex-column;
 }
 
 .a-footer__nav__item, .a-footer__subnav__item {
@@ -96,25 +106,24 @@
 
 // adblock blocks rendering of .sponsor
 
-
 .m-sponsors {
 	display: flex;
 	padding-top: vars.$spacer*1.5;
 	ul {
 		width: 100%;
-		display: flex;
-		flex-wrap: wrap;
-        justify-content: center;
+		@extend %flex-wrap-center;
         
         .a-spons {
-            width: 90px;
             flex-wrap: wrap;
             margin: 10px;
-        
-            img {
-                display: block;
-                width: 100%;
-            }
+			
+			// generates random photo each time css is updated
+			@for $i from 1 through 16 {
+				.spons#{$i}{
+					@extend %sponsorblock;
+					background-image: url("https://picsum.photos/id/#{math.random(149)}/90/90");
+				}
+			}
         }
 	}
 }

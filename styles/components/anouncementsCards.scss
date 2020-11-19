@@ -1,5 +1,6 @@
 @use "../abstracts/variables" as vars;
 @use "../abstracts/mixins" as mix;
+@use "../abstracts/extends";
 
 .o-announcements {
 	padding: vars.$spacer*1.5 0;
@@ -150,16 +151,13 @@ cards
 
 // volume icon in card
 .a-card__volume {
-	display: block;
-	position: absolute;
+	@extend %absolute-circle;
 	width: 30px;
 	height: 30px;
 	right: vars.$spacer / 3;
 	top: vars.$spacer / 3;
 	background: vars.$black;
-	border-radius: 100%;
 	opacity: 0.7;
-	border: 2px solid vars.$border-color;
 
 	&::after {
 		@include mix.icon("../img/sound.svg", 15);

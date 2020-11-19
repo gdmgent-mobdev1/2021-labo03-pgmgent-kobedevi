@@ -1,0 +1,31 @@
+@use "./variables" as vars;
+
+%flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+%flex-wrap-center{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+%absolute-top-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+%absolute-circle{
+    display: block;
+    position: absolute;
+    border-radius: 100%;
+    border: 2px solid vars.$border-color;
+}
+
+%sponsorblock{
+    width: 90px;
+    height: 90px;
+    display: block;
+}
